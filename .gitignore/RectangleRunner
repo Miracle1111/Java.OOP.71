@@ -1,0 +1,37 @@
+package FUR;
+
+import java.util.ArrayList;
+
+public class RectangleRunner {
+
+	public static void main(String[] args) {
+        Rectangle first = new Rectangle(5, 20);
+        String firstInfo = first.Result();
+        System.out.println(firstInfo);
+
+        Rectangle second = new Rectangle(15, 30);
+        String secondInfo = second.Result();
+        System.out.println(secondInfo);        
+
+        ArrayList<Rectangles> list = new ArrayList<>();
+        Rectangles first1 = new Rectangles(5, 20);
+        String first1Info = first1.Result();
+        System.out.println(first1Info);
+        System.out.println(first1.getLength());
+
+        Rectangles second1 = new Rectangles(15, 30);
+        String second1Info = second1.Result();
+        System.out.println(second1Info);  
+        System.out.println(second1.getWidth());  
+        list.add(first1);
+        list.add(second1);
+        System.out.println("Sum is " + getSum(list));
+	}
+        private static int getSum(ArrayList<Rectangles> list) {
+            int areaSum = 0;
+            for (Rectangles aList : list) {
+                areaSum = areaSum + aList.getArea();
+            }
+            return areaSum;
+        }
+    }
