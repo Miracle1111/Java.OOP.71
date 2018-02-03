@@ -1,0 +1,34 @@
+public class Point {
+	
+	private final double x;
+	private final double y;
+
+public Point (double x, double y) {
+	 if (!isX(x)) {
+         throw new IllegalArgumentException("illegal x: " + x);
+     }
+	 if (!isY(y)) {
+         throw new IllegalArgumentException("illegal y: " + y);
+     }
+     this.x = x;
+     this.y = y;
+}
+private boolean isX(double n) {
+    return n >= 0 && n <= 120;
+}
+private boolean isY(double n) {
+    return n >= 0 && n <= 120;
+}
+public double getX() {
+    return x;
+}
+public double getY() {
+    return y;
+}
+public Point(double x) {
+    this(x, 0);
+}
+
+public String sayHello() {
+    return "X is: " + x + ", Y is: " + y;
+}
