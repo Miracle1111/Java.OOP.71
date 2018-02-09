@@ -1,19 +1,19 @@
 public class TaxiRide {
-    private long passengers;
-    private long distance;
-    private long duration;
+    private int passengers_count;
+    private int distance;
+    private int duration;
 
-    public TaxiRide(long passengers, long distance, long duration) {
-        if (passengers < 0 && distance < 0 && duration < 0) {
+    public TaxiRide(int passengers_count, int distance, int duration) {
+        if (passengers_count < 0 && distance < 0 && duration < 0) {
             throw new IllegalArgumentException("Negative values");
         }
-        this.passengers = passengers;
+        this.passengers_count = passengers;
         this.distance = distance;
         this.duration = duration;
     }
 
-    public long getPassengers() {
-        return passengers;
+    public long getPassengersCount() {
+        return passengers_count;
     }
 
     public long getDistance() {
@@ -27,7 +27,7 @@ public class TaxiRide {
     @Override
     public String toString() {
         return "TaxiRide{" +
-                "passengers=" + passengers +
+                "passengers_count=" + passengers_count +
                 ", distance=" + distance +
                 ", duration=" + duration +
                 '}';
