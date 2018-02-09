@@ -1,0 +1,19 @@
+public class TaxiRunner {
+    public static void main(String[] args) {
+        TaxiRides taxiRides = new TaxiRides();
+
+        taxiRides.add(new TaxiRide(7, 24, 189));
+        taxiRides.add(new TaxiRide(10, 35, 12));
+
+        TaxiTariff familyTariff = new FamilyTariff();
+        TaxiTariff standardTariff = new StandardTariff();
+
+        long sumOfStandardTariff = taxiRides.calculatePrise(standardTariff);
+        long sumOfFamilyTariff = taxiRides.calculatePrise(familyTariff);
+
+        System.out.println("Sum of standard tariff = " + sumOfStandardTariff);
+        System.out.println("Sum of family tariff = " + sumOfFamilyTariff);
+
+
+    }
+}
