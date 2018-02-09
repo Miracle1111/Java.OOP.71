@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class TaxiRides {
+    private final ArrayList<TaxiRide> taxiRides = new ArrayList<TaxiRide>();
+
+    public void add (TaxiRide taxiRide){
+        taxiRides.add(taxiRide);
+    }
+    public long calculatePrise(TaxiTariff tariff){
+        long sum = 0;
+        for (TaxiRide taxiRide : taxiRides) {
+            sum += tariff.calculatePrice(taxiRide);
+        }
+        return sum;
+    }
+
+    @Override
+    public String toString() {
+        return "TaxiRides{" +
+                "taxiRides=" + taxiRides +
+                '}';
+    }
+}
