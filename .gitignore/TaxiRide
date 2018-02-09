@@ -12,15 +12,15 @@ public class TaxiRide {
         this.duration = duration;
     }
 
-    public long getPassengersCount() {
+    public int getPassengersCount() {
         return passengers_count;
     }
 
-    public long getDistance() {
+    public int getDistance() {
         return distance;
     }
 
-    public long getDuration() {
+    public int getDuration() {
         return duration;
     }
 
