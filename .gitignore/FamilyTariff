@@ -1,5 +1,5 @@
 public class FamilyTariff implements TaxiTariff {
-    public long calculatePrice(TaxiRide ride) {
+    public long Price(TaxiRide ride) {
         return 50 + 20 * ride.getDistance() / ride.getPassengers();
     }
 }
