@@ -1,9 +1,15 @@
 public class Puppy extends Dog {
+    String breed;
 
-    public Puppy(String habitat, String name) {
+    public Puppy(String habitat, String name, String breed) {
         super(habitat, name);
+        this.breed = breed;
+        
     }
 
+public String getBreed() {
+    return breed;
+}
     public void bite(){
         System.out.println("ARrrrr");
     }
