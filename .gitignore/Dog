@@ -1,0 +1,30 @@
+public class Dog  extends Animal {
+    private String name;
+
+    public Dog(String name, String habitat) {
+        super(name);
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void bark(){
+        System.out.println("Woof-woof!");
+    }
+
+
+    public void bite(){
+        System.out.println("Rrrr...");
+    }
+
+    public void run(){
+        System.out.println("Dog is running");
+    }
+
+    public void jump(){
+        System.out.println("Dog is jumping");
+    }
+}
