@@ -1,0 +1,22 @@
+public class PuppyRunner {
+
+
+    public static void main(String[] args) {
+        Puppy Furr = new Puppy("Austria", "Furr");
+        Furr.sleep();
+        Furr.eat();
+        Furr.breath();
+        Furr.bark();
+        Furr.bite();
+        Furr.jump();
+        Furr.run();
+        getInfo(Furr);
+
+    }
+
+    public static void getInfo(Puppy puppy){
+        System.out.println("\nHabitat:"+puppy.getHabitat() +
+                "\nName:" + puppy.getName());
+
+    }
+}
