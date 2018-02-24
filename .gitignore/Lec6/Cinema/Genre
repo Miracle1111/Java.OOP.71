@@ -1,0 +1,13 @@
+public enum Genre {
+    ACTION,
+    ADVENTURE,
+    COMEDY,
+    DRAMA,
+    HISTORY,
+    HORROR,
+    SCIENCE_FICTION,
+    WAR,
+    WESTERN,
+    THRILLER;
+
+}
