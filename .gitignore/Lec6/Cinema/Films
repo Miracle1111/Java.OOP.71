@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Films {
+    private List<Film> films = new ArrayList<>();
+    private List<Film> resultOfSearch = new ArrayList<>();
+
+    public void add(Film film) {
+        films.add(film);
+    }
+
+    public List searchGenre(Genre genre) {
+        for (Film film : films) {
+            if (film.getGenre() == genre) {
+                resultOfSearch.add(film);
+            }
+        }
+     return resultOfSearch;
+    }
+
+
+
+    public List searchFilmsByGenreAndBetweenYears(Genre genre, int fromYear,int toYear) {
+        checkYear(fromYear,toYear);
+        for (Film film : films) {
+            if(film.getGenre() == genre && film.getReleaseYear() > fromYear && film.getReleaseYear()<toYear) {
+                resultOfSearch.add(film);
+            }
+        }
+        return  resultOfSearch;
+    }
+
+
+    public void checkYear(int from, int to) {
+        if(from < 0 || to < 0 || from > to) {
+            throw new IllegalArgumentException("Wrong year");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Films{" +
+                "films=" + films +
+                '}';
+    }
+}
