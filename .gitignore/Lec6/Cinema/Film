@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Film {
+    private String name;
+    private int releaseYear;
+    private List<String> actorNames = new ArrayList<>();
+    private Genre genre;
+
+
+    public Film(String name, int releaseYear,List<String> actorNames, Genre genre) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+        this.genre = genre;
+        this.actorNames = actorNames;
+    }
+
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public List<String> getActorNames() {
+        return actorNames;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "name='" + name + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", actorNames=" + actorNames +
+                ", genre=" + genre +
+                '}';
+    }
+}
